@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 		</div>
 		<div class="login-content">
 			<form method="post">
-				<h2 class="title">BINMALEY INDEGENT MONITORING SYSTEM</h2>
+				<h2 class="title">BINMALEY INDIGENT MONITORING SYSTEM</h2>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
