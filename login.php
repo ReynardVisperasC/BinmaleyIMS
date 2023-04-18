@@ -17,13 +17,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 			if($result && mysqli_num_rows($result) > 0){
 				$user_data = mysqli_fetch_assoc($result);
 				if($user_data['user_pass'] === $pass){
-						if($user_data['user_status'] === "1"){
+						if($user_data['user_status'] === "Admin"){
 							$_SESSION['id'] = $user_data['id'];
 						header("Location: index.php");
 						die;
 						}
 						
-						elseif ($user_data['user_status'] === "2") {
+						elseif ($user_data['user_status'] === "Barangay") {
 							$_SESSION['id'] = $user_data['id'];
 						header("Location: brgy.php");
 						die;
@@ -88,9 +88,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
            		    	<input type="password" placeholder="Password" class="input" name= "pass">
             	   </div>
             	</div>
-            	<a href="#">Forgot Password?</a>
+            
             	<input type="submit" class="btn" value="Login">
             </form>
+			
         </div>
     </div>
 </body>
